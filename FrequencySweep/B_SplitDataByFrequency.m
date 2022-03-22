@@ -14,6 +14,7 @@ for i = 1:length(sweep.names)
        indexset(j,:) = [min(ii) max(ii)];
     end
     sweep.frequencyIndexSet{i} = indexset;
+    sweep.frequencyUnique{i} = frequencyUnique;
 end
 
 save(fullfile(M.folder,"B_frequencySweep.mat"),'sweep','-v7.3')
